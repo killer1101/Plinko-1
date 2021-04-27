@@ -48,6 +48,30 @@ function draw() {
   }
 
   if(frameCount%60===0){
+    particles.push(new Particle(random(width/2-0, width/2+60), 10,10));
+    score++;
+    }
+  
+   for (var j = 0; j < particles.length; j++) {
+    
+    particles[j].display();
+    }
+  }
+
+function draw() {
+  background(0);  
+ Engine.update(engine);
+  for (var k = 0; k < divisions.length; k++) {
+     
+    divisions[k].display();
+    }
+
+  for(var j = 0; j < plinkos.length; j++ ){
+
+    plinkos[j].display();
+  }
+
+  if(frameCount%60===0){
     particles.push(new Particle(random(width/2-30, width/2+30), 10,10));
     score++;
     }
